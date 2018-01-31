@@ -1,0 +1,43 @@
+{
+  "name": "twitch-extension-starter",
+  "version": "0.0.1",
+  "description": "This will get you started developing Twitch extensions using React!",
+  "main": "src/index.js",
+  "author": "Martin Beierling <mbeierling@gmail.com>",
+  "scripts": {
+    "start": "concurrently \"yarn watch\" \"yarn start:server\"",
+    "start:build": "concurrently \"yarn build\" \"yarn start:server\"",
+    "start:viewer": "parcel src/viewer.html",
+    "start:config": "parcel src/config.html",
+    "start:server": "node server.js",
+    "watch": "parcel watch src/index.html --public-url ./",
+    "build": "parcel build src/index.html --no-minify --public-url ./"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-remove-console": "^6.9.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "bestzip": "^1.1.4",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "eslint": "4.1.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "2.34.1",
+    "eslint-plugin-import": "2.6.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "express": "^4.16.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "parcel-bundler": "mbeierl/parcel#7c275ecaa05b1392528f73ea96bb699bc5c3c9a2",
+    "path": "^0.12.7"
+  }
+}
