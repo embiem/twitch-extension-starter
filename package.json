@@ -4,6 +4,7 @@
   "description": "This will get you started developing Twitch extensions using React!",
   "main": "src/index.js",
   "author": "Martin Beierling <mbeierling@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "start": "concurrently \"yarn watch\" \"yarn start:server\"",
     "start:build": "concurrently \"yarn build\" \"yarn start:server\"",
