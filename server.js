@@ -6,7 +6,7 @@ const https = require("https");
 
 const app = express();
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8080);
 
 app.use("/", express.static(path.join(__dirname, "dist")));
 app.use(bodyParser.json());
@@ -32,8 +32,10 @@ let options = {
 };
 
 https.createServer(options, app).listen(app.get("port"), function() {
+  const port = app.get("port");
+  console.log(`Viewer page running at https://localhost:${port}/viewer.html`);
+  console.log(`Config page running at https://localhost:${port}/config.html`);
   console.log(
-    "Extension Boilerplate service running on https://localhost:" +
-      app.get("port")
+    `Live-Config page running at https://localhost:${port}/live_config.html`
   );
 });
