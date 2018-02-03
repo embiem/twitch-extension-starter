@@ -2,10 +2,6 @@
 
 This project will get you started developing Twitch Extensions using React!
 
-TODO:
-* explain in README how to package
-* use the bestzip package to auto-zip a build for upload to twitch
-
 ## Getting started
 
 1. Install with yarn or npm:
@@ -22,8 +18,41 @@ TODO:
 
 5. Happy hacking!
 
+## Testing on Twitch
+
+To test your extension on Twitch while running the development server (`yarn start` as described above), follow these steps:
+
+1. Create your Twitch extension at https://dev.twitch.tv
+
+2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:3000/`), Viewer Path (the file created when you navigate to the viewer page in your browser, e.g. `06cabf87ea6717ccf26829d1469bb0a1.html`) and (Live) Config respectively.
+
+3. On the Versions -> Version Status page, click the "View on Twitch and Install" button.
+
+4. Install your extension. You should be redirected to your config page and already see the content (default: "You're a streamer on the config page!")
+
+5. Go back to the extensions inside your streamer dashboard, locate your extension under "Installed Extensions" and "Activate" your new extension.
+
+6. Go to your channel and see the Viewer page of your extension integrated on Twitch! Make any changes and see them change live!!
+
+7. Lastly go to your live streamer dashboard and see your live config page displayed in the Extensions widget!
+
+
+In Short:
+
+* Your viewer page is being displayed on your channel either as a video overlay (when your channel is live) or panel. You can choose between overlay or panel when creating the extension.
+
+* Your config page is being displayed in your streamer's extensions dashboard, after installing the extension.
+
+* Your live config page is being displayed in your streamer's live dashboard, after installing and activating the extension.
+
+## Packaged ZIP
+
+To create the ZIP, after successfully testing the extension, run "yarn package". This will create a new ZIP file in `/dist_zip` folder named after the current version set in your package.json.
+
+In your extension's settings under Versions -> Version Assets, upload the created ZIP file. Then your're ready to move to "Hosted Test" in the Version Status section.
+
 ## Notes
 
-It references a fork of parcel-bundler that is stable and has a change to ensure no unsafe evals are used, which is not allowed in Twitch's iframes that will contain your extension.
+This package references a fork of parcel-bundler that is stable and has a change to ensure no unsafe evals are used, which is not allowed in Twitch's iframes that will contain your extension.
 
 Currently, this fork uses parcel v1.3.1 with the unsafe eval fix.
