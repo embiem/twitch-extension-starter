@@ -33,9 +33,13 @@ let options = {
 
 https.createServer(options, app).listen(app.get("port"), function() {
   const port = app.get("port");
-  console.log(`Viewer page running at https://localhost:${port}/viewer.html`);
-  console.log(`Config page running at https://localhost:${port}/config.html`);
   console.log(
-    `Live-Config page running at https://localhost:${port}/live_config.html`
+    `Viewer page running at https://localhost:${port}/viewer/viewer.html`
+  );
+  console.log(
+    `Config page running at https://localhost:${port}/config/config.html`
+  );
+  console.log(
+    `Live-Config page running at https://localhost:${port}/live_config/live_config.html`
   );
 });

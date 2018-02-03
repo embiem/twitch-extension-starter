@@ -12,7 +12,7 @@ This project will get you started developing Twitch Extensions using React!
 
 `yarn start` or `npm run start`
 
-3. It will tell you the paths to the different pages in the console, e.g. "Viewer page running at https://localhost:8080/viewer.html". Go to this address in your browser.
+3. It will tell you the paths to the different pages in the console, e.g. "Viewer page running at https://localhost:8080/viewer/viewer.html". Go to this address in your browser.
 
 4. Open file in `src/components/ViewerPage/Viewer.js`, change `<h1>You're a viewer!</h1>` to something cool and watch it being updated live in the browser!
 
@@ -24,7 +24,7 @@ To test your extension on Twitch while running the development server (`yarn sta
 
 1. Create your Twitch extension at https://dev.twitch.tv
 
-2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Viewer Path` (default: `viewer.html`), `Config Path` (default: `config.html`) and `Live-Config Path` (default: `live_config.html`) respectively.
+2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Viewer Path` (default: `viewer/viewer.html`), `Config Path` (default: `config/config.html`) and `Live-Config Path` (default: `live_config/live_config.html`) respectively.
 
 3. On the Versions -> Version Status page, click the "View on Twitch and Install" button.
 
