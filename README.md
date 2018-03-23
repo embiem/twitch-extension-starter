@@ -51,6 +51,10 @@ To create the ZIP, after successfully testing the extension, run "yarn package".
 
 In your extension's settings under Versions -> Version Assets, upload the created ZIP file. Then your're ready to move to "Hosted Test" in the Version Status section.
 
+## Alternative
+
+There's now an official developer-rig by TwitchDev, which gives you more boilerplate to work with. For an official solution, please go to https://github.com/twitchdev/developer-rig
+
 ## Notes
 
 This package references a fork of parcel-bundler that is stable and has a change to ensure no unsafe evals are used, which is not allowed in Twitch's iframes that will contain your extension.
