@@ -12,9 +12,9 @@ This project will get you started developing Twitch Extensions using React!
 
 `yarn start` or `npm run start`
 
-3. It will tell you the paths to the different pages in the console, e.g. "Viewer page running at https://localhost:8080/viewer/viewer.html". Go to this address in your browser.
+3. It will tell you the paths to the different pages in the console, e.g. "https://localhost:8080/panel.html". Go to this address in your browser.
 
-4. Open file in `src/components/ViewerPage/Viewer.js`, change `<h1>You're a viewer!</h1>` to something cool and watch it being updated live in the browser!
+4. Open file in `src/components/PanelPage/Panel.js`, change `<h1>This is the panel!</h1>` to something cool and watch it being updated live in the browser!
 
 5. Happy hacking!
 
@@ -24,7 +24,7 @@ To test your extension on Twitch while running the development server (`yarn sta
 
 1. Create your Twitch extension at https://dev.twitch.tv
 
-2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Panel Path` (default: `panel.html`), `Config Path` (default: `config.html`) and `Live-Config Path` (default: `live_config.html`) respectively. These are the pages defined under `src/pages/`.
+2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Panel Viewer Path` (default: `panel.html`), `Config Path` (default: `config.html`) and `Live-Config Path` (default: `live_config.html`) respectively. These are the pages defined under `src/pages/`.
 
 3. On the Versions -> Version Status page, click the "View on Twitch and Install" button.
 
@@ -35,7 +35,6 @@ To test your extension on Twitch while running the development server (`yarn sta
 6. Go to your channel and see the Viewer page of your extension integrated on Twitch! Make any changes and see them change live!!
 
 7. Lastly go to your live streamer dashboard and see your live config page displayed in the Extensions widget!
-
 
 In Short:
 
