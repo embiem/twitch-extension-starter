@@ -24,7 +24,7 @@ To test your extension on Twitch while running the development server (`yarn sta
 
 1. Create your Twitch extension at https://dev.twitch.tv
 
-2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Viewer Path` (default: `viewer/viewer.html`), `Config Path` (default: `config/config.html`) and `Live-Config Path` (default: `live_config/live_config.html`) respectively.
+2. Inside your extension versions, under "Asset Hosting", insert the correct values for `Testing Base URI` (by default: `https://localhost:8080/`), `Panel Path` (default: `panel.html`), `Config Path` (default: `config.html`) and `Live-Config Path` (default: `live_config.html`) respectively. These are the pages defined under `src/pages/`.
 
 3. On the Versions -> Version Status page, click the "View on Twitch and Install" button.
 
@@ -53,10 +53,4 @@ In your extension's settings under Versions -> Version Assets, upload the create
 
 ## Alternative
 
-There's now an official developer-rig by TwitchDev, which gives you more boilerplate to work with. For an official solution, please go to https://github.com/twitchdev/developer-rig
-
-## Notes
-
-This package references a fork of parcel-bundler that is stable and has a change to ensure no unsafe evals are used, which is not allowed in Twitch's iframes that will contain your extension.
-
-Currently, this fork uses parcel v1.3.1 with the unsafe eval fix.
+There's now an official developer-rig by TwitchDev, which gives you a more integrated environment. For an official solution, please go to https://github.com/twitchdev/developer-rig. You could also combine the rig with this starter code.

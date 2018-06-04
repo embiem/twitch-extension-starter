@@ -1,24 +1,14 @@
 {
   "name": "twitch-extension-starter",
-  "version": "1.1.0",
-  "description":
-    "This will get you started developing Twitch extensions using React!",
+  "version": "1.2.0",
+  "description": "This will get you started developing Twitch extensions using React!",
   "main": "src/index.js",
   "author": "Martin Beierling <mbeierling@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start":
-      "concurrently \"yarn watch:viewer\" \"yarn watch:config\" \"yarn watch:live_config\" \"yarn dev-server\"",
+    "start": "concurrently \"parcel watch src/pages/config.html src/pages/live_config.html src/pages/mobile.html src/pages/panel.html src/pages/video_component.html src/pages/video_fullscreen.html -d dist --public-url ./\" \"yarn dev-server\"",
     "dev-server": "node server.js",
-    "watch:viewer": "parcel watch src/viewer.html -d dist/viewer --public-url ./",
-    "watch:config": "parcel watch src/config.html -d dist/config --public-url ./",
-    "watch:live_config": "parcel watch src/live_config.html -d dist/live_config --public-url ./",
-    "build":
-      "npm run build:viewer && npm run build:config && npm run build:live_config",
-    "build:viewer": "parcel build src/viewer.html -d dist/viewer --no-minify --public-url ./",
-    "build:config": "parcel build src/config.html -d dist/config --no-minify --public-url ./",
-    "build:live_config":
-      "parcel build src/live_config.html -d dist/live_config --no-minify --public-url ./",
+    "build": "parcel build src/pages/config.html src/pages/live_config.html src/pages/mobile.html src/pages/panel.html src/pages/video_component.html src/pages/video_fullscreen.html -d dist --no-minify --public-url ./",
     "zip": "cross-env bestzip dist_zip/$npm_package_version.zip dist/*",
     "package": "npm run build && npm run zip"
   },
@@ -32,7 +22,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-remove-console": "^6.9.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "1.7.0",
     "babel-preset-react": "^6.24.1",
     "bestzip": "^1.1.4",
     "body-parser": "^1.18.2",
@@ -47,7 +37,7 @@
     "express": "^4.16.2",
     "fs": "^0.0.1-security",
     "https": "^1.0.0",
-    "parcel-bundler": "mbeierl/parcel#7c275ecaa05b1392528f73ea96bb699bc5c3c9a2",
+    "parcel-bundler": "^1.8.1",
     "path": "^0.12.7"
   }
 }

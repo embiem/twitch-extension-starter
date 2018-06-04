@@ -10,7 +10,9 @@ app.set("port", process.env.PORT || 8080);
 
 app.use("/", express.static(path.join(__dirname, "dist")));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use((req, res, next) => {
   res.setHeader(
@@ -31,15 +33,10 @@ let options = {
   cert: fs.readFileSync(path.join(__dirname, "certs/testing.crt"))
 };
 
-https.createServer(options, app).listen(app.get("port"), function() {
-  const port = app.get("port");
-  console.log(
-    `Viewer page running at https://localhost:${port}/viewer/viewer.html`
-  );
-  console.log(
-    `Config page running at https://localhost:${port}/config/config.html`
-  );
-  console.log(
-    `Live-Config page running at https://localhost:${port}/live_config/live_config.html`
-  );
+const port = app.get("port");
+https.createServer(options, app).listen(port, function () {
+
+  let dirCont = fs.readdirSync(path.join(__dirname, "dist"));
+  let files = dirCont.filter(f => f.indexOf("html") !== -1);
+  files.forEach(file => console.log(`https://localhost:${port}/${file}`));
 });
