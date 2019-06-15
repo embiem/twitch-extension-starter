@@ -1,5 +1,7 @@
 # Twitch Extension Starter
 
+**Note: This project is outdated and the official [TwitchDev](https://github.com/twitchdev?type=source) resources/repos are recommended. If you're new to Twitch extensions, I highly recommend checking out this repo: [/extension-getting-started](https://github.com/twitchdev/extension-getting-started)**
+
 This project will get you started developing Twitch Extensions using React!
 
 ## Getting started
